@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# My 1st Franklin Project
+This project is my very first attempt to use Adobe's Franklin project to replicate LA County Department of Public Social Services landing page.
 
 ## Environments
 - Preview: https://main--ladpss--danielcodepad.hlx.page/
