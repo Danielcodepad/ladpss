@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--overlay-background-color);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -55,6 +55,10 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  left: 55px;
 }
 
 /* hamburger */
@@ -71,7 +75,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: var(--overlay-background-color);
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -140,25 +144,32 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
 
 /* brand */
 header .nav-brand {
+  /*display: block*/
+  display: flex;
   grid-area: brand;
   flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
+  font-size: var(--heading-font-size-s); 
   font-weight: 700;
   line-height: 1;
+}
+
+header nav .nav-brand a {
+  position: relative;
+  top: -55px;
+  left: 25px;
 }
 
 header nav .nav-brand img {
   width: 128px;
   height: auto;
+  padding-top: 20px;
 }
 
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
-  display: none;
-  visibility: hidden;
-  background-color: var(--overlay-color);
+  display: flex;
 }
 
 header nav[aria-expanded="true"] .nav-sections {
@@ -172,10 +183,21 @@ header nav .nav-sections ul  {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  float: right;
 }
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+  display: inline;
+  
+}
+
+header nav .nav-sections ul > li > a {
+  font-size: 16px;
+  padding: 8px;
+  /*background-color: #dddddd;for testing only*/
+  position: static;
+  display: block;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -236,6 +258,10 @@ header nav .nav-sections ul > li > ul > li {
     font-weight: 500;
   }
 
+  header nav .nav-brand > p > a {
+    font-size: 8px;
+  }
+
   header nav .nav-sections > ul > li > ul {
     display: none;
     position: relative;
@@ -273,3 +299,6 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+
+
