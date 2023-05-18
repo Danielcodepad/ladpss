@@ -17,7 +17,7 @@ header nav {
   margin: auto;
   max-width: 1264px;
   height: var(--nav-height);
-  padding: 0 1rem;
+  padding: 0 5rem;
   font-family: var(--body-font-family);
 }
 
@@ -28,6 +28,7 @@ header nav[aria-expanded="true"] {
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
+  
 }
 
 @media (min-width: 600px) {
@@ -40,6 +41,7 @@ header nav[aria-expanded="true"] {
   header nav {
     display: flex;
     justify-content: space-between;
+    padding: 0 2rem;
   }
 
   header nav[aria-expanded="true"] {
@@ -70,8 +72,8 @@ header nav .nav-hamburger {
 }
 
 header nav .nav-hamburger button {
-  height: 22px;
-  margin: 0;
+  height: 30px;
+  margin: 0 25px 0px 0px;
   border: 0;
   border-radius: 0;
   padding: 0;
@@ -80,6 +82,10 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  /*start here*/
+  position: absolute;
+  top: 20;
+  right: 0;
 }
 
 header nav .nav-hamburger-icon,
@@ -88,7 +94,7 @@ header nav .nav-hamburger-icon::after {
   box-sizing: border-box;
   display: block;
   position: relative;
-  width: 20px;
+  width: 25px;
 }
 
 header nav .nav-hamburger-icon::before,
@@ -154,9 +160,10 @@ header .nav-brand {
 }
 
 header nav .nav-brand a {
-  position: relative;
-  top: -55px;
-  left: 25px;
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  font-size: 8px;
 }
 
 header nav .nav-brand img {
@@ -243,6 +250,9 @@ header nav .nav-sections ul > li > ul > li {
     top: unset;
     bottom: .5em;
     transform: rotate(315deg);
+    /*menu test
+    position: fixed;
+    right: 0px;*/
   }
 
   header nav .nav-sections ul {
