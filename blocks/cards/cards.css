@@ -11,13 +11,13 @@
   border-radius: 4px;
   border: 1px solid var(--overlay-background-color);
   background-color: var(--background-color);
-  padding: 0px;
+  padding: 0;
   margin-bottom: 10px;
   margin-left: 20px;
 }
 
 .cards .cards-card-body {
-  margin: 0px;
+  margin: 0;
 }
 
 .service-cards .cards-card-body {
@@ -54,6 +54,6 @@
 
 .cards > ul > li p {
   padding-left: 5px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   line-height: 25px;  
 }
