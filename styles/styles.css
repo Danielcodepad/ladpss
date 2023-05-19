@@ -17,7 +17,7 @@
    --background-color: #009cdc; 
   --overlay-background-color: #172576;
   --highlight-background-color: #ccc;
-  --text-color: #ffffff;
+  --text-color: #fff;
   
 
   /* fonts */
@@ -90,7 +90,7 @@ h6 { font-size: var(--heading-font-size-xs) }
 
 #hi-what-can-we-help-you-with { 
   text-align: center;
-  color: #000000;
+  color: #000;
   font-weight: 400;
 }
 
