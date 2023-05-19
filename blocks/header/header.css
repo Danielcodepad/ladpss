@@ -176,7 +176,7 @@ header nav .nav-brand img {
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
-  display: flex;
+  display: none;
 }
 
 header nav[aria-expanded="true"] .nav-sections {
