@@ -82,7 +82,6 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
-  /*start here*/
   position: absolute;
   top: 20;
   right: 0;
@@ -150,7 +149,6 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
 
 /* brand */
 header .nav-brand {
-  /*display: block*/
   display: flex;
   grid-area: brand;
   flex-basis: 128px;
@@ -202,7 +200,6 @@ header nav .nav-sections ul > li {
 header nav .nav-sections ul > li > a {
   font-size: 16px;
   padding: 8px;
-  /*background-color: #dddddd;for testing only*/
   position: static;
   display: block;
 }
@@ -250,9 +247,6 @@ header nav .nav-sections ul > li > ul > li {
     top: unset;
     bottom: .5em;
     transform: rotate(315deg);
-    /*menu test
-    position: fixed;
-    right: 0px;*/
   }
 
   header nav .nav-sections ul {
