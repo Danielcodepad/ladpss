@@ -15,11 +15,9 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
    --background-color: #009cdc; 
-  /*--background-color: #132228;*/
-  /*--overlay-background-color: #eee;*/
   --overlay-background-color: #172576;
   --highlight-background-color: #ccc;
-  --text-color: #ffffff;
+  --text-color: #fff;
   
 
   /* fonts */
@@ -79,9 +77,7 @@ h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
-  /* margin-top: 1em;
-  margin-bottom: .5em; */
-  margin: 0px;
+  margin: 0;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
@@ -94,7 +90,7 @@ h6 { font-size: var(--heading-font-size-xs) }
 
 #hi-what-can-we-help-you-with { 
   text-align: center;
-  color: #000000;
+  color: #000;
   font-weight: 400;
 }
 
@@ -132,7 +128,6 @@ main pre {
 }
 
 a:any-link {
-  /*color: var(--link-color);*/
   color: var(--text-color);
   text-decoration: none;
 }
@@ -233,7 +228,7 @@ main img {
 
 main .section {
   /* padding: 64px 16px; */
-  padding: 16px 16px;
+  padding: 16px;
 }
 
 
@@ -241,7 +236,7 @@ main .section {
 @media (min-width: 600px) {
   main .section {
     /* padding: 64px 32px; */
-    padding: 16px 16px;
+    padding: 16px;
   }
 }
 
