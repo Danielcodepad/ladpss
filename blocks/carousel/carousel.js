@@ -13,7 +13,7 @@ const SLIDE_ID_PREFIX = 'carousel-display';
 const SLIDE_ANIMATION_DURATION_MS = 640;
 
 class CarouselState {
-  constructor(interval, currentDisplay = 0, firstVisibleDisplay = 1, maxVisibleDisplay = 0) {
+  constructor(currentDisplay, interval, firstVisibleDisplay = 1, maxVisibleDisplay = 0) {
     this.firstVisibleDisplay = firstVisibleDisplay;
     this.maxVisibleDisplay = maxVisibleDisplay;
     this.currentDisplay = currentDisplay;
@@ -27,7 +27,7 @@ class CarouselState {
  * @param carousel The carousel
  * @param blockState Current states of carousel block
  */
-function syncActiveDot(block, blockState) {
+function syncActiveDisplay(block, blockState) {
   [...block.children].forEach((slide, index) => {
     if (index === blockState.currentDisplay) {
       slide.removeAttribute('class');
@@ -55,7 +55,7 @@ function stopAutoDisplay(blockState) {
 function goToDisplay(carousel, blockState) {
   const carouselContainer = carousel.querySelector('.carousel-display-container');
   setTimeout(() => {
-    syncActiveDot(carouselContainer, blockState);
+    syncActiveDisplay(carouselContainer, blockState);
   }, SLIDE_ANIMATION_DURATION_MS);
 
   blockState.currentDisplay = (blockState.currentDisplay + 1) % blockState.maxVisibleDisplay;
@@ -67,7 +67,7 @@ function goToDisplay(carousel, blockState) {
  * @param index The display's position
  * @return {HTMLUListElement} A decorated carousel display element
  */
-function buildSlide(blockState, display, index) {
+function buildDisplay(blockState, display, index) {
   display.setAttribute('id', `${SLIDE_ID_PREFIX}${index}`);
   display.setAttribute('data-display-index', index);
   if (index !== blockState.firstVisibleDisplay) {
@@ -126,7 +126,7 @@ export default function decorate(block) {
   blockState.maxVisibleDisplay = displays.length;
   const displayToAdd = new Array(blockState.maxVisibleDisplay);
   displays.forEach((display, index) => {
-    displayToAdd[index] = buildSlide(blockState, display, index + 1);
+    displayToAdd[index] = buildDisplay(blockState, display, index + 1);
   });
 
   carousel.append(...displayToAdd);
