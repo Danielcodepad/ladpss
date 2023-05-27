@@ -12,8 +12,12 @@ const DEFAULT_DISPLAY_INTERVAL_MS = 5000;
 const SLIDE_ID_PREFIX = 'carousel-display';
 const SLIDE_ANIMATION_DURATION_MS = 640;
 
+// const DEFAULT_CONFIG = Object.freeze({
+//   interval: DEFAULT_DISPLAY_INTERVAL_MS,
+// });
+
 class CarouselState {
-  constructor(interval, currentDisplay = 0, firstVisibleDisplay = 1, maxVisibleDisplay = 0) {
+  constructor(currentDisplay, interval, firstVisibleDisplay = 1, maxVisibleDisplay = 0) {
     this.firstVisibleDisplay = firstVisibleDisplay;
     this.maxVisibleDisplay = maxVisibleDisplay;
     this.currentDisplay = currentDisplay;
@@ -27,7 +31,7 @@ class CarouselState {
  * @param carousel The carousel
  * @param blockState Current states of carousel block
  */
-function syncActiveDot(block, blockState) {
+function syncActiveDisplay(block, blockState) {
   [...block.children].forEach((slide, index) => {
     if (index === blockState.currentDisplay) {
       slide.removeAttribute('class');
@@ -45,7 +49,7 @@ function syncActiveDot(block, blockState) {
 function stopAutoDisplay(blockState) {
   clearInterval(blockState.displayInterval);
   blockState.displayInterval = undefined;
-}  */
+} */
 
 /**
  * Show a single display into view.
@@ -55,7 +59,7 @@ function stopAutoDisplay(blockState) {
 function goToDisplay(carousel, blockState) {
   const carouselContainer = carousel.querySelector('.carousel-display-container');
   setTimeout(() => {
-    syncActiveDot(carouselContainer, blockState);
+    syncActiveDisplay(carouselContainer, blockState);
   }, SLIDE_ANIMATION_DURATION_MS);
 
   blockState.currentDisplay = (blockState.currentDisplay + 1) % blockState.maxVisibleDisplay;
