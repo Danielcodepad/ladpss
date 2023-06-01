@@ -3,7 +3,7 @@ This project is my very first attempt to use Adobe's Franklin project to replica
 
 ## Environments
 - Preview: https://main--ladpss--danielcodepad.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Live: https://main--ladpss--danielcodepad.hlx.live/
 
 ## Installation
 
