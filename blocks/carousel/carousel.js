@@ -79,7 +79,7 @@ function buildDisplay(blockState, display, index) {
   if (index === blockState.firstVisibleDisplay
     || index === blockState.firstVisibleDisplay + 1) {
     display.querySelectorAll('img').forEach((image) => {
-      image.loading = 'eager';
+      image.loading = 'lazy';
     });
   }
   return display;
